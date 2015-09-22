@@ -161,7 +161,10 @@ void OnTick(const Timer::Id &timer_id, const WallClock::Value &clock) {
   // PLACE HERE YOUR TICK HANDLER CODE.
 }
 
-
+	void OnHello(const Ptr<Session> &session, const Json &message) {
+		Json empty_response;
+		session->SendMessage("world", empty_response);
+	}
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -198,7 +201,7 @@ void RegisterEventHandlers() {
     // 2. Another JSON message example.
     //    In this time, we skipped a JSON schema.
     //    So no validation will be performed.
-    HandlerRegistry::Register("hello", OnEchoMessage);
+	  HandlerRegistry::Register("hello", OnHello);
 
 
     // 3. Registering a Google Protobuf message handler.
