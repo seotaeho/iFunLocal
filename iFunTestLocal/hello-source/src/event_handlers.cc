@@ -198,7 +198,7 @@ void RegisterEventHandlers() {
     // 2. Another JSON message example.
     //    In this time, we skipped a JSON schema.
     //    So no validation will be performed.
-    HandlerRegistry::Register("echo", OnEchoMessage);
+    HandlerRegistry::Register("hello", OnEchoMessage);
 
 
     // 3. Registering a Google Protobuf message handler.
